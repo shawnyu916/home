@@ -1,19 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Building a Personal Blog from Scratch - Shawn Yu</title>
+    <title>Building a Personal Blog from Scratch · 从零搭建个人博客 · Shawn Yu</title>
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
+    <div class="stars">
+        <div class="stars-layer"></div>
+        <div class="stars-layer"></div>
+        <div class="stars-layer"></div>
+    </div>
+    <div class="aurora"></div>
+    <div class="earth-glow"></div>
+
     <header class="site-header">
         <nav class="nav-container">
             <a href="../index.html" class="logo">Shawn Yu</a>
             <ul class="nav-links">
-                <li><a href="../index.html">Blog</a></li>
-                <li><a href="../#about">About</a></li>
-                <li><a href="../#contact">Contact</a></li>
+                <li><a href="../index.html">Blog · 博客</a></li>
+                <li><a href="../index.html#about">About · 关于</a></li>
+                <li><a href="../index.html#contact">Contact · 联系</a></li>
             </ul>
         </nav>
     </header>
@@ -21,43 +29,50 @@
     <main class="post-content">
         <article>
             <header class="post-header">
-                <time class="post-date" datetime="2026-04-15">April 15, 2026</time>
-                <h1>Building a Personal Blog from Scratch</h1>
+                <div class="post-meta">
+                    <time class="post-date" datetime="2026-04-15">April 15, 2026 · 2026年4月15日</time>
+                    <span class="post-tag">Life · 生活</span>
+                </div>
+                <h1>Building a Personal Blog from Scratch<br>从零搭建个人博客</h1>
             </header>
 
             <div class="post-body">
-                <p>After years of publishing on third-party platforms, I decided it was time to build something of my own. Not because I was dissatisfied with existing tools, but because I wanted complete control over my digital presence and the creative freedom to experiment.</p>
+                <p>After years of publishing on third-party platforms, I decided it was time to build something of my own. Not because I was dissatisfied with existing tools, but because I wanted complete control over my digital presence and the creative freedom to experiment.<br><br>在第三方平台上发布了多年内容后，我决定是时候创造一些属于自己的东西了。这并非因为我对现有工具不满意，而是因为我渴望对自己的数字空间拥有完全的控制权，以及创作实验的自由。</p>
 
-                <h2>Why Build Your Own?</h2>
-                <p>Third-party platforms like Medium and dev.to are excellent for reaching audiences, but they come with limitations. You don't own the design, you're subject to their monetization rules, and your content lives behind their branding. For a personal blog, I wanted something that felt truly <em>mine</em>.</p>
+                <h2>Why Build Your Own? · 为何要自己建造？</h2>
+                <p>Third-party platforms like Medium and dev.to are excellent for reaching audiences, but they come with limitations. You don't own the design, you're subject to their monetization rules, and your content lives behind their branding. For a personal blog, I wanted something that felt truly <em>mine</em>.<br><br>Medium 和 dev.to 这样的第三方平台对于触达读者来说非常出色，但它们也有局限性。你不拥有设计，要遵守它们的商业规则，你的內容也活在它们的品牌背后。对于一个个人博客，我想要一些真正"属于我"的东西。</p>
 
-                <h2>The Technical Choices</h2>
-                <p>I kept things simple: vanilla HTML, CSS, and a flat file structure. No frameworks, no build tools, no database. Just static files served directly. This means fast load times, zero maintenance overhead, and the ability to host anywhere.</p>
+                <h2>The Technical Choices · 技术选型</h2>
+                <p>I kept things simple: vanilla HTML, CSS, and a flat file structure. No frameworks, no build tools, no database. Just static files served directly. This means fast load times, zero maintenance overhead, and the ability to host anywhere.<br><br>我保持了极简：纯 HTML、CSS，以及扁平的文件夹结构。无框架，无构建工具，无数据库。纯静态文件直接服务。这意味着快速的加载时间、零维护负担，以及任意托管的能力。</p>
 
-                <h2>Design Philosophy</h2>
-                <p>The design prioritizes readability and focus. Dark theme for late-night writing sessions. Generous whitespace. Typography chosen for long-form reading. No clutter, no distractions—just words on a screen.</p>
+                <h2>Design Philosophy · 设计理念</h2>
+                <p>The design prioritizes readability and focus. A cosmic theme to remind us of our place in the universe — small, yet connected to something vast and beautiful. Generous whitespace. Typography chosen for long-form reading. No clutter, no distractions—just words on a screen, like stars scattered across the night sky.<br><br>设计以可读性和专注为首。宇宙主题提醒我们在这个世界中的位置——渺小，却与广阔美丽的事物相连。充足的留白。为深度阅读而选的字体排版。无杂乱，无干扰——只有屏幕上的文字，如同星星散落在夜空。</p>
 
-                <h2>Lessons Learned</h2>
-                <p>The process taught me more about web standards than years of working with frameworks. When you strip away the abstractions, you understand how browsers actually work—how the cascade flows, how layout algorithms operate, how accessibility truly functions.</p>
+                <h2>Lessons Learned · 经验教训</h2>
+                <p>The process taught me more about web standards than years of working with frameworks. When you strip away the abstractions, you understand how browsers actually work—how the cascade flows, how layout algorithms operate, how accessibility truly functions.<br><br>这个过程教会我的 web 标准知识，超过了多年使用框架所学。当你剥离掉抽象层，你才真正理解浏览器是如何工作的——级联如何流动、布局算法如何运作、无障碍访问如何真正实现。</p>
 
-                <p>This blog isn't trying to be anything fancy. It's a place for thoughts, experiments, and occasional photography. If you find something useful here, I'm glad. Otherwise, thanks for stopping by.</p>
+                <p>This blog isn't trying to be anything fancy. It's a place for thoughts, experiments, and occasional photography. If you find something useful here, I'm glad. Otherwise, thanks for stopping by.<br><br>这个博客并不追求华丽。它是一个承载思考、实验和偶尔摄影的地方。如果你在这里找到了有用的东西，我很高兴。否则，感谢你的路过。</p>
+
+                <p style="text-align: center; margin-top: 3rem; color: var(--accent); font-size: 1.5rem;">✦<br><br>"We are all stardust." — Carl Sagan<br>"我们都是星尘。" —— 卡尔·萨根</p>
             </div>
         </article>
 
         <div class="post-nav">
-            <a href="../index.html">&larr; Back to all posts</a>
+            <a href="../index.html">← Back to all posts · 返回全部文章</a>
         </div>
     </main>
 
     <footer class="site-footer">
         <div class="footer-content">
+            <div class="footer-brand">Shawn Yu</div>
+            <p class="footer-quote">"Look up at the stars and not down at your feet." — Stephen Hawking<br>"仰望星空，而非俯视大地。" —— 史蒂芬·霍金</p>
             <div class="social-links">
                 <a href="#" aria-label="Twitter">Twitter</a>
                 <a href="#" aria-label="GitHub">GitHub</a>
                 <a href="#" aria-label="LinkedIn">LinkedIn</a>
                 <a href="#" aria-label="RSS">RSS</a>
             </div>
-            <p class="copyright">&copy; 2026 Shawn Yu. All rights reserved.</p>
+            <p class="copyright">&copy; 2026 Shawn Yu · 星光不问赶路人 · All rights reserved.</p>
         </div>
     </footer>
 </body>

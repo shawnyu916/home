@@ -1,67 +1,125 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shawn Yu - Personal Blog</title>
+    <title>Shawn Yu · 星河与诗 · Stars & Poetry</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <div class="stars">
+        <div class="stars-layer"></div>
+        <div class="stars-layer"></div>
+        <div class="stars-layer"></div>
+    </div>
+    <div class="aurora"></div>
+    <div class="earth-glow"></div>
+
     <header class="site-header">
         <nav class="nav-container">
             <a href="index.html" class="logo">Shawn Yu</a>
             <ul class="nav-links">
-                <li><a href="index.html">Blog</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="index.html">Blog · 博客</a></li>
+                <li><a href="favorites.html">Favorites · 收藏</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
         <section class="hero">
-            <div class="hero-content">
-                <h1>Shawn Yu</h1>
-                <p class="bio">Software engineer, writer, and occasional photographer. I write about technology, design, and the intersection of creativity and code. Currently building things that matter.</p>
+            <div class="hero-content hero-split">
+                <img src="statics/person.jpg" alt="Shawn Yu" class="avatar">
+                <div class="hero-text">
+                    <h1>Shawn Yu</h1>
+                    <p class="tagline">
+    <span class="tagline-en">Senior Industrial AI Vision Engineer · AI Enthusiast · Writer</span>
+    <span class="tagline-cn">工业AI视觉高级工程师 · AI爱好者 · 写作者</span>
+</p>
+                    <div class="divider"></div>
+                    <p class="bio">I write about the beauty of Earth, the vastness of the universe, and the stories that connect us all.<br>我书写地球之美、宇宙之浩瀚，以及连接你我他的故事。</p>
+                </div>
             </div>
         </section>
 
         <section class="recent-posts">
-            <h2>Recent Posts</h2>
+            <div class="section-header">
+                <h2>Recent Posts · 最新文章</h2>
+                <div class="section-line"></div>
+            </div>
             <div class="posts-grid">
                 <article class="post-card">
-                    <time class="post-date" datetime="2026-04-15">April 15, 2026</time>
-                    <h3 class="post-title"><a href="posts/first-post.html">Building a Personal Blog from Scratch</a></h3>
-                    <p class="post-excerpt">After years of using third-party platforms, I decided to build my own blog. Here's what I learned about creating something truly personal on the web.</p>
-                    <a href="posts/first-post.html" class="read-more">Read more</a>
+                    <div class="post-card-inner">
+                        <div class="post-meta">
+                            <time class="post-date" datetime="2026-04-15">Apr 15, 2026</time>
+                            <span class="post-tag">Life · 生活</span>
+                        </div>
+                        <h3 class="post-title"><a href="posts/first-post.html">Building a Personal Blog from Scratch</a></h3>
+                        <p class="post-excerpt">After years of using third-party platforms, I decided to build my own blog. Here's what I learned about creating something truly personal on the web.<br>在使用了多年第三方平台后，我决定亲手建造一个属于自己的博客。这是我在创建一个真正属于我的网络空间中学到的东西。</p>
+                        <a href="posts/first-post.html" class="read-more">
+                            Read more · 阅读全文
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        </a>
+                    </div>
                 </article>
 
                 <article class="post-card">
-                    <time class="post-date" datetime="2026-04-10">April 10, 2026</time>
-                    <h3 class="post-title"><a href="#">The Art of Minimal Design</a></h3>
-                    <p class="post-excerpt">Exploring how simplicity in design can lead to more impactful user experiences and clearer communication of ideas.</p>
-                    <a href="#" class="read-more">Read more</a>
+                    <div class="post-card-inner">
+                        <div class="post-meta">
+                            <time class="post-date" datetime="2026-04-10">Apr 10, 2026</time>
+                            <span class="post-tag">Design · 设计</span>
+                        </div>
+                        <h3 class="post-title"><a href="#">The Art of Minimal Design · 极简设计之美</a></h3>
+                        <p class="post-excerpt">Exploring how simplicity in design can lead to more impactful user experiences and clearer communication of ideas.<br>探索设计的简约如何带来更深刻的用户体验和更清晰的思想表达。</p>
+                        <a href="#" class="read-more">
+                            Read more · 阅读全文
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        </a>
+                    </div>
                 </article>
 
                 <article class="post-card">
-                    <time class="post-date" datetime="2026-03-28">March 28, 2026</time>
-                    <h3 class="post-title"><a href="#">Why I Switched to Static Site Generators</a></h3>
-                    <p class="post-excerpt">The journey from dynamic CMS platforms to lightning-fast static sites, and why it was the best decision for my writing workflow.</p>
-                    <a href="#" class="read-more">Read more</a>
+                    <div class="post-card-inner">
+                        <div class="post-meta">
+                            <time class="post-date" datetime="2026-03-28">Mar 28, 2026</time>
+                            <span class="post-tag">Tech · 技术</span>
+                        </div>
+                        <h3 class="post-title"><a href="#">Why I Switched to Static Site Generators · 静态站点的魅力</a></h3>
+                        <p class="post-excerpt">The journey from dynamic CMS platforms to lightning-fast static sites, and why it was the best decision for my writing workflow.<br>从动态内容管理系统到闪电般快速的静态站点，这是我写作生涯中最正确的决定之一。</p>
+                        <a href="#" class="read-more">
+                            Read more · 阅读全文
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        </a>
+                    </div>
                 </article>
 
                 <article class="post-card">
-                    <time class="post-date" datetime="2026-03-15">March 15, 2026</time>
-                    <h3 class="post-title"><a href="#">Lessons from My First Year as a Developer</a></h3>
-                    <p class="post-excerpt">Reflections on the challenges, breakthroughs, and unexpected joys of starting a career in software engineering.</p>
-                    <a href="#" class="read-more">Read more</a>
+                    <div class="post-card-inner">
+                        <div class="post-meta">
+                            <time class="post-date" datetime="2026-03-15">Mar 15, 2026</time>
+                            <span class="post-tag">Reflection · 感悟</span>
+                        </div>
+                        <h3 class="post-title"><a href="#">Lessons from My First Year as a Developer · 开发者的第一年</a></h3>
+                        <p class="post-excerpt">Reflections on the challenges, breakthroughs, and unexpected joys of starting a career in software engineering.<br>回顾软件工程职业生涯中的挑战、突破与意想不到的喜悦。</p>
+                        <a href="#" class="read-more">
+                            Read more · 阅读全文
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        </a>
+                    </div>
                 </article>
 
                 <article class="post-card">
-                    <time class="post-date" datetime="2026-03-01">March 1, 2026</time>
-                    <h3 class="post-title"><a href="#">Finding Balance in a Digital World</a></h3>
-                    <p class="post-excerpt">Thoughts on maintaining focus, creativity, and mental well-being while building things for the internet.</p>
-                    <a href="#" class="read-more">Read more</a>
+                    <div class="post-card-inner">
+                        <div class="post-meta">
+                            <time class="post-date" datetime="2026-03-01">Mar 1, 2026</time>
+                            <span class="post-tag">Philosophy · 哲思</span>
+                        </div>
+                        <h3 class="post-title"><a href="#">Finding Balance in a Digital World · 数字世界中的平衡</a></h3>
+                        <p class="post-excerpt">Thoughts on maintaining focus, creativity, and mental well-being while building things for the internet.<br>在建造互联网产品的过程中，如何保持专注力、创造力与内心的平静。</p>
+                        <a href="#" class="read-more">
+                            Read more · 阅读全文
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        </a>
+                    </div>
                 </article>
             </div>
         </section>
@@ -69,14 +127,45 @@
 
     <footer class="site-footer">
         <div class="footer-content">
+            <div class="footer-brand">Shawn Yu</div>
+            <p class="footer-quote">"Look up at the stars and not down at your feet." — Stephen Hawking<br>"仰望星空，而非俯视大地。" —— 史蒂芬·霍金</p>
             <div class="social-links">
-                <a href="#" aria-label="Twitter">Twitter</a>
-                <a href="#" aria-label="GitHub">GitHub</a>
-                <a href="#" aria-label="LinkedIn">LinkedIn</a>
-                <a href="#" aria-label="RSS">RSS</a>
+                <a href="#" aria-label="WeChat">WeChat</a>
+                <a href="https://github.com/shawnyu916" target="_blank" aria-label="GitHub">GitHub</a>
+                <a href="https://www.linkedin.com/in/shawn-yu-3088b7102" target="_blank" aria-label="LinkedIn">LinkedIn</a>
             </div>
-            <p class="copyright">&copy; 2026 Shawn Yu. All rights reserved.</p>
+            <p class="copyright">&copy; 2026 Shawn Yu · 星光不问赶路人 · All rights reserved.</p>
         </div>
     </footer>
+
+    <div class="modal" id="wechat-modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <h3>WeChat · 微信</h3>
+            <img src="statics/wechat_qr.jpg" alt="WeChat QR Code" class="wechat-qr-modal">
+            <p>Scan to connect · 扫码添加</p>
+        </div>
+    </div>
+
+    <script>
+        const modal = document.getElementById('wechat-modal');
+        const wechatLink = document.querySelector('a[aria-label="WeChat"]');
+        const closeBtn = document.querySelector('.modal-close');
+
+        wechatLink.addEventListener('click', (e) => {
+            e.preventDefault();
+            modal.style.display = 'flex';
+        });
+
+        closeBtn.addEventListener('click', () => {
+            modal.style.display = 'none';
+        });
+
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+    </script>
 </body>
 </html>
