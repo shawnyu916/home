@@ -7,6 +7,15 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <!-- Music Player -->
+    <audio id="bgm" loop preload="auto">
+        <source src="media/bgm.mp3" type="audio/mpeg">
+    </audio>
+    <button class="music-btn" id="musicBtn" onclick="toggleMusic()" title="播放音乐">
+        <svg id="iconPlay" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+        <svg id="iconPause" viewBox="0 0 24 24" fill="currentColor" style="display:none"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+    </button>
+
     <div class="stars">
         <div class="stars-layer"></div>
         <div class="stars-layer"></div>
@@ -105,6 +114,30 @@
             if (e.target === modal) {
                 modal.style.display = 'none';
             }
+        });
+
+        // Music Player
+        const bgm = document.getElementById('bgm');
+        const musicBtn = document.getElementById('musicBtn');
+        const iconPlay = document.getElementById('iconPlay');
+        const iconPause = document.getElementById('iconPause');
+
+        function toggleMusic() {
+            if (bgm.paused) {
+                bgm.play();
+                musicBtn.classList.add('playing');
+                iconPlay.style.display = 'none';
+                iconPause.style.display = 'block';
+            } else {
+                bgm.pause();
+                musicBtn.classList.remove('playing');
+                iconPlay.style.display = 'block';
+                iconPause.style.display = 'none';
+            }
+        }
+
+        bgm.addEventListener('ended', () => {
+            bgm.play();
         });
     </script>
 </body>
