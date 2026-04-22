@@ -15,7 +15,7 @@ jobs:
       - name: Inject Cloudflare Analytics Token
         run: |
           if [ -n "${{ secrets.CF_ANALYTICS_TOKEN }}" ]; then
-            sed -i 's/YOUR_CLOUDFLARE_ANALYTICS_TOKEN/${{ secrets.CF_ANALYTICS_TOKEN }}/g' index.html
+            sed -i 's/"token": ""/"token": "${{ secrets.CF_ANALYTICS_TOKEN }}"/g' index.html
           fi
         shell: bash
 

@@ -11,7 +11,7 @@
     <audio id="bgm" loop preload="auto">
         <source src="music/bgm.mp3" type="audio/mpeg">
     </audio>
-    <button class="music-btn" id="musicBtn" onclick="toggleMusic()" title="播放音乐">
+    <button class="music-btn" id="musicBtn" onclick="toggleMusic()" title="播放音乐" aria-label="播放背景音乐">
         <svg id="iconPlay" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
         <svg id="iconPause" viewBox="0 0 24 24" fill="currentColor" style="display:none"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
     </button>
@@ -26,7 +26,7 @@
 
     <header class="site-header">
         <nav class="nav-container">
-            <a href="#home" class="logo" data-nav="home">Shawn Yu</a>
+            <a href="#home" class="logo" data-nav="home" aria-label="返回首页">Shawn Yu</a>
             <ul class="nav-links">
                 <li><a href="#home" class="nav-link" data-nav="home">Blog · 博客</a></li>
                 <li><a href="#gallery" class="nav-link" data-nav="gallery">Gallery · 相册</a></li>
@@ -93,21 +93,21 @@
                 <div class="section-line"></div>
             </div>
             <div class="favorites-grid">
-                <a href="https://claude.ai" target="_blank" class="favorite-card">
+                <a href="https://claude.ai" target="_blank" rel="noopener noreferrer" class="favorite-card">
                     <div class="favorite-icon">🤖</div>
                     <div class="favorite-content">
                         <h3>Claude AI</h3>
                         <p>Anthropic's AI assistant for thoughtful conversations and complex tasks.<br>为你提供深度对话与复杂任务协助的AI伙伴。</p>
                     </div>
                 </a>
-                <a href="https://github.com" target="_blank" class="favorite-card">
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="favorite-card">
                     <div class="favorite-icon">💻</div>
                     <div class="favorite-content">
                         <h3>GitHub</h3>
                         <p>Where the world's developers share code and build the future.<br>全球开发者共享代码、共创未来的平台。</p>
                     </div>
                 </a>
-                <a href="https://chat.openai.com" target="_blank" class="favorite-card">
+                <a href="https://chat.openai.com" target="_blank" rel="noopener noreferrer" class="favorite-card">
                     <div class="favorite-icon">🧠</div>
                     <div class="favorite-content">
                         <h3>ChatGPT</h3>
@@ -123,21 +123,21 @@
                 <div class="section-line"></div>
             </div>
             <div class="favorites-grid">
-                <a href="https://dribbble.com" target="_blank" class="favorite-card">
+                <a href="https://dribbble.com" target="_blank" rel="noopener noreferrer" class="favorite-card">
                     <div class="favorite-icon">🎨</div>
                     <div class="favorite-content">
                         <h3>Dribbble</h3>
                         <p>Discover the world's top designers' work and get inspired.<br>探索全球顶尖设计师的作品，获取灵感。</p>
                     </div>
                 </a>
-                <a href="https://unsplash.com" target="_blank" class="favorite-card">
+                <a href="https://unsplash.com" target="_blank" rel="noopener noreferrer" class="favorite-card">
                     <div class="favorite-icon">📸</div>
                     <div class="favorite-content">
                         <h3>Unsplash</h3>
                         <p>Beautiful, free photos gifted by the world's most generous photographers.<br>由全球最慷慨摄影师捐赠的免费高清图片。</p>
                     </div>
                 </a>
-                <a href="https://www.figma.com" target="_blank" class="favorite-card">
+                <a href="https://www.figma.com" target="_blank" rel="noopener noreferrer" class="favorite-card">
                     <div class="favorite-icon">✏️</div>
                     <div class="favorite-content">
                         <h3>Figma</h3>
@@ -153,21 +153,21 @@
                 <div class="section-line"></div>
             </div>
             <div class="favorites-grid">
-                <a href="https://arxiv.org" target="_blank" class="favorite-card">
+                <a href="https://arxiv.org" target="_blank" rel="noopener noreferrer" class="favorite-card">
                     <div class="favorite-icon">📚</div>
                     <div class="favorite-content">
                         <h3>arXiv</h3>
                         <p>Open-access archive for scholarly articles in AI, physics, and more.<br>AI、物理等领域学术论文的开放获取存档。</p>
                     </div>
                 </a>
-                <a href="https://medium.com" target="_blank" class="favorite-card">
+                <a href="https://medium.com" target="_blank" rel="noopener noreferrer" class="favorite-card">
                     <div class="favorite-icon">📝</div>
                     <div class="favorite-content">
                         <h3>Medium</h3>
                         <p>Where ideas are born and stories worth reading live.<br>灵感诞生与优质故事的平台。</p>
                     </div>
                 </a>
-                <a href="https://www.kaggle.com" target="_blank" class="favorite-card">
+                <a href="https://www.kaggle.com" target="_blank" rel="noopener noreferrer" class="favorite-card">
                     <div class="favorite-icon">📊</div>
                     <div class="favorite-content">
                         <h3>Kaggle</h3>
@@ -183,21 +183,21 @@
                 <div class="section-line"></div>
             </div>
             <div class="favorites-grid">
-                <a href="https://notion.so" target="_blank" class="favorite-card">
+                <a href="https://notion.so" target="_blank" rel="noopener noreferrer" class="favorite-card">
                     <div class="favorite-icon">📓</div>
                     <div class="favorite-content">
                         <h3>Notion</h3>
                         <p>The all-in-one workspace for notes, docs, and collaboration.<br>集笔记、文档、协作为一体的工作空间。</p>
                     </div>
                 </a>
-                <a href="https://translate.google.com" target="_blank" class="favorite-card">
+                <a href="https://translate.google.com" target="_blank" rel="noopener noreferrer" class="favorite-card">
                     <div class="favorite-icon">🌐</div>
                     <div class="favorite-content">
                         <h3>Google Translate</h3>
                         <p>Bridging languages, one translation at a time.<br>打破语言障碍，连接世界。</p>
                     </div>
                 </a>
-                <a href="https://www.weather.com" target="_blank" class="favorite-card">
+                <a href="https://www.weather.com" target="_blank" rel="noopener noreferrer" class="favorite-card">
                     <div class="favorite-icon">🌤️</div>
                     <div class="favorite-content">
                         <h3>Weather</h3>
@@ -257,15 +257,15 @@
 
         <section class="gallery-section">
             <div class="gallery-grid" id="gallery-grid">
-                <div class="gallery-item" onclick="openLightbox('images/20260414-185709.jpg')">
+                <button class="gallery-item" onclick="openLightbox('images/20260414-185709.jpg')" aria-label="查看大图: 2026年4月14日">
                     <img src="images/20260414-185709.jpg" alt="2026年4月14日" loading="lazy">
-                </div>
-                <div class="gallery-item" onclick="openLightbox('images/photo_2026-04-14_18-39-02.jpg')">
+                </button>
+                <button class="gallery-item" onclick="openLightbox('images/photo_2026-04-14_18-39-02.jpg')" aria-label="查看大图: Photo 2026-04-14 18-39-02">
                     <img src="images/photo_2026-04-14_18-39-02.jpg" alt="Photo 2026-04-14 18-39-02" loading="lazy">
-                </div>
-                <div class="gallery-item" onclick="openLightbox('images/photo_2026-04-14_18-39-30.jpg')">
+                </button>
+                <button class="gallery-item" onclick="openLightbox('images/photo_2026-04-14_18-39-30.jpg')" aria-label="查看大图: Photo 2026-04-14 18-39-30">
                     <img src="images/photo_2026-04-14_18-39-30.jpg" alt="Photo 2026-04-14 18-39-30" loading="lazy">
-                </div>
+                </button>
             </div>
         </section>
     </main>
@@ -285,7 +285,7 @@
 
     <div class="modal" id="wechat-modal">
         <div class="modal-content">
-            <span class="modal-close">&times;</span>
+            <span class="modal-close" role="button" aria-label="关闭">&times;</span>
             <h3>WeChat · 微信</h3>
             <img src="statics/wechat_qr.jpg" alt="WeChat QR Code" class="wechat-qr-modal">
             <p>Scan to connect · 扫码添加</p>
@@ -401,6 +401,6 @@
             bgm.play();
         });
     </script>
-<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "YOUR_CLOUDFLARE_ANALYTICS_TOKEN"}'></script>
+<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": ""}'></script>
 </body>
 </html>
