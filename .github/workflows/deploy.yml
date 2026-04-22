@@ -1,0 +1,27 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Inject Cloudflare Analytics Token
+        run: |
+          if [ -n "${{ secrets.CF_ANALYTICS_TOKEN }}" ]; then
+            sed -i 's/YOUR_CLOUDFLARE_ANALYTICS_TOKEN/${{ secrets.CF_ANALYTICS_TOKEN }}/g' index.html
+          fi
+        shell: bash
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./
+          publish_branch: gh-pages
