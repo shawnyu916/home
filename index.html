@@ -9,7 +9,7 @@
 <body>
     <!-- Music Player -->
     <audio id="bgm" loop preload="auto">
-        <source src="media/bgm.mp3" type="audio/mpeg">
+        <source src="music/bgm.mp3" type="audio/mpeg">
     </audio>
     <button class="music-btn" id="musicBtn" onclick="toggleMusic()" title="播放音乐">
         <svg id="iconPlay" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
@@ -29,6 +29,7 @@
             <a href="#home" class="logo" data-nav="home">Shawn Yu</a>
             <ul class="nav-links">
                 <li><a href="#home" class="nav-link" data-nav="home">Blog · 博客</a></li>
+                <li><a href="#gallery" class="nav-link" data-nav="gallery">Gallery · 相册</a></li>
                 <li><a href="#favorites" class="nav-link" data-nav="favorites">Favorites · 收藏</a></li>
             </ul>
         </nav>
@@ -244,6 +245,32 @@
         </div>
     </main>
 
+    <!-- Gallery Section -->
+    <main id="section-gallery" class="spa-section" style="display:none;">
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Gallery</h1>
+                <p class="tagline">Moments Captured · 定格的瞬间</p>
+                <div class="divider"></div>
+                <p class="bio">A collection of photographs from everyday life and travels.<br>日常生活与旅途中的摄影作品。</p>
+            </div>
+        </section>
+
+        <section class="gallery-section">
+            <div class="gallery-grid" id="gallery-grid">
+                <div class="gallery-item" onclick="openLightbox('images/20260414-185709.jpg')">
+                    <img src="images/20260414-185709.jpg" alt="2026年4月14日" loading="lazy">
+                </div>
+                <div class="gallery-item" onclick="openLightbox('images/photo_2026-04-14_18-39-02.jpg')">
+                    <img src="images/photo_2026-04-14_18-39-02.jpg" alt="Photo 2026-04-14 18-39-02" loading="lazy">
+                </div>
+                <div class="gallery-item" onclick="openLightbox('images/photo_2026-04-14_18-39-30.jpg')">
+                    <img src="images/photo_2026-04-14_18-39-30.jpg" alt="Photo 2026-04-14 18-39-30" loading="lazy">
+                </div>
+            </div>
+        </section>
+    </main>
+
     <footer class="site-footer">
         <div class="footer-content">
             <div class="footer-brand">Shawn Yu</div>
@@ -273,7 +300,6 @@
 
         function router() {
             const hash = window.location.hash || '#home';
-            const route = hash.slice(1); // remove #
 
             // Hide all sections
             sections.forEach(s => s.style.display = 'none');
@@ -284,6 +310,12 @@
                 document.querySelectorAll('.nav-link[data-nav], .logo[data-nav]').forEach(l => {
                     l.classList.toggle('active', l.dataset.nav === 'favorites');
                 });
+            } else if (hash === '#gallery') {
+                document.getElementById('section-gallery').style.display = 'block';
+                document.querySelectorAll('.nav-link[data-nav], .logo[data-nav]').forEach(l => {
+                    l.classList.toggle('active', l.dataset.nav === 'gallery');
+                });
+                loadGallery();
             } else if (hash.startsWith('#post/')) {
                 const postId = hash.slice(1).replace('/', '-');
                 const el = document.getElementById('section-' + postId);
@@ -300,6 +332,21 @@
                     l.classList.toggle('active', l.dataset.nav === 'home');
                 });
             }
+        }
+
+        // ===== Gallery =====
+        let galleryLoaded = false;
+        function loadGallery() {
+            galleryLoaded = true; // images are static HTML, no loading needed
+        }
+
+        function openLightbox(src) {
+            const lb = document.createElement('div');
+            lb.className = 'lightbox';
+            lb.innerHTML = `<img src="${src}" alt="${src.split('/').pop()}"><span class="lightbox-close">&times;</span>`;
+            lb.querySelector('.lightbox-close').addEventListener('click', () => lb.remove());
+            lb.addEventListener('click', (e) => { if (e.target === lb) lb.remove(); });
+            document.body.appendChild(lb);
         }
 
         window.addEventListener('hashchange', router);
